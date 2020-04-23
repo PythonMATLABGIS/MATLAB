@@ -1,0 +1,64 @@
+#tool:	deliverablesynch.py
+#name:	config.txt
+#date:	August 2019
+#by:	paul.kennedy@guardiangeomatics.com
+#this file contains the same parameters used in teh creatiopn of deliverables.  
+#the fdefault filename is config.txt, but you can have as many of these as you like, and call them on the command line
+#e.g you can have 1 per mission and call them mission1.txt, mission2.txt etc
+#and then run the program like this...
+#python c:/infinitytool/ggtool/deliverablesynch.py -config mission2.txt -i <inputfolder> -o <outputfolder>
+#etc
+#It just makes it easier to configure the process
+#entries can be in any order, just ensure the key work (e.g. basin) is at the very start of the line, followed by a comma then the value.
+#no spaces please!
+#always use a forward slash '/' not a back slash '\'
+##############################################################################################################
+
+#the project is where we get the slow changing documents such as calibration reports, offset diagrams etc from
+{project},./fortnight
+
+#the inputfolder is used as the root source of the files to be compiled.
+{inputfolder},./widearea/20191101_6100_101_P11_S01_A09_117
+
+#the output folder is used as the root input folder.
+{outputfolder},./toclient
+
+{fortnight},IP20191113
+{surveydate},20191101
+{divenumber},0117
+{area},A09
+{auv},6100
+
+#################################
+{run},RUN
+{vessel},IP
+{sonar},01_SONAR
+{bathymetry},02_BATIMETRIA
+{mbes},02_MBES
+{laser},04_LASER
+{fotos},03_FOTO
+{laser},04_LASER
+{sbp},05_SBP
+
+#for HIGH pass operations
+{passtype},01_VOO_ALTO, for high pass
+{passtypeshort},VA, for high pass
+
+#for low pass operations
+#{passtype},02_VOO_BAIXO
+#{passtypeshort},VB, for low pass
+
+#the basin, can be eith BC or ES
+{bacia},BC
+
+#nomenclature codes  
+{servicetype},AV
+{reporttype},PT
+
+#date represents delivery date (date deliverable was created). just leave this blank.  it will be populated automatically
+{date},mydate
+
+#the equipmentide is the serial number of the tide gauge
+{equipmentide},0000000
+{tidestartdate},20190101
+{tideenddate},20191231
